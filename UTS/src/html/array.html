@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array dalam PHP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007BFF;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Array dalam PHP</h1>
+</header>
+
+<section>
+    <h2>Apa Itu Array?</h2>
+    <p>Array adalah struktur data yang dapat menyimpan banyak nilai dalam satu variabel di PHP.</p>
+</section>
+
+<section>
+    <h2>Jenis-Jenis Array</h2>
+
+    <h3>1. Array Numerik</h3>
+    <p>Array yang menggunakan indeks angka secara otomatis.</p>
+    <pre>
+&lt;?php
+$buah = ["Apel", "Mangga", "Jeruk"];
+echo $buah[0]; // Output: Apel
+?&gt;
+    </pre>
+
+    <h3>2. Array Asosiatif</h3>
+    <p>Array dengan kunci (key) yang dapat ditentukan sendiri.</p>
+    <pre>
+&lt;?php
+$umur = ["Andi" => 20, "Budi" => 22, "Citra" => 21];
+echo $umur["Budi"]; // Output: 22
+?&gt;
+    </pre>
+
+    <h3>3. Array Multidimensi</h3>
+    <p>Array di dalam array.</p>
+    <pre>
+&lt;?php
+$mahasiswa = [
+    ["Nama" => "Andi", "Umur" => 20],
+    ["Nama" => "Budi", "Umur" => 22]
+];
+echo $mahasiswa[1]["Nama"]; // Output: Budi
+?&gt;
+    </pre>
+</section>
+
+<footer style="text-align: center; margin-top: 20px; padding: 10px; background: #333; color: white;">
+    &copy; 2025 Belajar PHP
+</footer>
+
+</body>
+</html>

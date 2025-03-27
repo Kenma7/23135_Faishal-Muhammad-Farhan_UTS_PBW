@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengenalan CSS</title>
+    <style>
+        /* Styling umum */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #16213e;
+        }
+
+        h1 {
+            color: #6a5acd;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #6a5acd;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #a29bfe;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #0f3460;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        pre {
+            background-color: #16213e;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #ffffff;
+        }
+
+        .example {
+            background-color: #1a1a2e;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #16213e;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pengenalan CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Apa itu CSS?</a></li>
+                <li><a href="#cara-pakai">Cara Menggunakan CSS</a></li>
+                <li><a href="#contoh">Contoh Implementasi</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="intro">
+        <h2>Apa itu CSS?</h2>
+        <p>CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mengatur tampilan halaman web, seperti warna, font, dan layout.</p>
+    </section>
+    
+    <section id="cara-pakai">
+        <h2>Cara Menggunakan CSS</h2>
+        <p>Ada tiga cara menggunakan CSS dalam HTML:</p>
+        <ul>
+            <li><strong>Inline CSS:</strong> Langsung di dalam elemen HTML menggunakan atribut <code>style</code>.</li>
+            <li><strong>Internal CSS:</strong> Ditulis dalam tag <code>&lt;style&gt;</code> di dalam bagian <code>&lt;head&gt;</code>.</li>
+            <li><strong>External CSS:</strong> Menggunakan file terpisah dengan ekstensi <code>.css</code>.</li>
+        </ul>
+    </section>
+
+    <section id="contoh">
+        <h2>Contoh Implementasi</h2>
+        <p>Berikut adalah contoh penggunaan CSS untuk mengubah warna teks dan latar belakang:</p>
+        <div class="example">
+            <h3>Contoh CSS</h3>
+            <pre>
+/* CSS Eksternal */
+body {
+    background-color: #1a1a2e;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* CSS Internal */
+&lt;style&gt;
+h1 {
+    color: #6a5acd;
+}
+&lt;/style&gt;
+
+/* CSS Inline */
+&lt;h1 style="color: red;"&gt;Teks Merah&lt;/h1&gt;
+            </pre>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Pengenalan CSS</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perulangan dalam PHP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007BFF;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Perulangan dalam PHP</h1>
+</header>
+
+<section>
+    <h2>Apa Itu Perulangan?</h2>
+    <p>Perulangan (looping) digunakan untuk menjalankan blok kode berulang kali selama kondisi tertentu masih terpenuhi.</p>
+</section>
+
+<section>
+    <h2>Jenis Perulangan dalam PHP</h2>
+    
+    <h3>1. Perulangan <code>for</code></h3>
+    <p>Digunakan ketika jumlah iterasi sudah diketahui.</p>
+    <pre>
+&lt;?php
+for ($i = 1; $i <= 5; $i++) {
+    echo "Angka: $i &lt;br&gt;";
+}
+?&gt;
+    </pre>
+
+    <h3>2. Perulangan <code>while</code></h3>
+    <p>Digunakan ketika jumlah iterasi tidak diketahui dan bergantung pada suatu kondisi.</p>
+    <pre>
+&lt;?php
+$i = 1;
+while ($i <= 5) {
+    echo "Angka: $i &lt;br&gt;";
+    $i++;
+}
+?&gt;
+    </pre>
+
+    <h3>3. Perulangan <code>do-while</code></h3>
+    <p>Mirip dengan <code>while</code>, tetapi akan dijalankan minimal satu kali.</p>
+    <pre>
+&lt;?php
+$i = 1;
+do {
+    echo "Angka: $i &lt;br&gt;";
+    $i++;
+} while ($i <= 5);
+?&gt;
+    </pre>
+
+    <h3>4. Perulangan <code>foreach</code> (Untuk Array)</h3>
+    <p>Digunakan untuk melakukan iterasi pada elemen array.</p>
+    <pre>
+&lt;?php
+$buah = ["Apel", "Mangga", "Jeruk"];
+foreach ($buah as $item) {
+    echo "Buah: $item &lt;br&gt;";
+}
+?&gt;
+    </pre>
+</section>
+
+<footer style="text-align: center; margin-top: 20px; padding: 10px; background: #333; color: white;">
+    &copy; 2025 Belajar PHP
+</footer>
+
+</body>
+</html>

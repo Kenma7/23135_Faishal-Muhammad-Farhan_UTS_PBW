@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengontrol Alur Program dengan PHP</title>
+    <style>
+        /* Styling umum */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #16213e;
+        }
+
+        h1 {
+            color: #6a5acd;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #6a5acd;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #a29bfe;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #0f3460;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        pre {
+            background-color: #16213e;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #ffffff;
+        }
+
+        .example {
+            background-color: #1a1a2e;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #16213e;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mengontrol Alur Program dengan PHP</h1>
+        <nav>
+            <ul>
+                <li><a href="#pengertian">Apa itu Pengkondisian?</a></li>
+                <li><a href="#jenis">Jenis Pengkondisian</a></li>
+                <li><a href="#contoh">Contoh Implementasi</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="pengertian">
+        <h2>Apa itu Pengkondisian?</h2>
+        <p>Pengkondisian dalam pemrograman adalah cara untuk mengontrol jalannya program berdasarkan kondisi tertentu.</p>
+    </section>
+    
+    <section id="jenis">
+        <h2>Jenis Pengkondisian dalam PHP</h2>
+        <ul>
+            <li><strong>If Statement</strong> - Mengeksekusi blok kode jika kondisi bernilai <code>true</code>.</li>
+            <li><strong>If-Else Statement</strong> - Menjalankan kode alternatif jika kondisi tidak terpenuhi.</li>
+            <li><strong>Elseif Statement</strong> - Digunakan untuk mengecek beberapa kondisi secara berurutan.</li>
+            <li><strong>Switch Statement</strong> - Digunakan ketika ada banyak kemungkinan kondisi.</li>
+        </ul>
+    </section>
+
+    <section id="contoh">
+        <h2>Contoh Implementasi</h2>
+        <p>Berikut adalah contoh sederhana penggunaan pengkondisian dalam PHP:</p>
+        <div class="example">
+            <h3>Contoh If-Else</h3>
+            <pre>
+&lt;?php
+$nilai = 75;
+
+if ($nilai >= 80) {
+    echo "Selamat, Anda mendapatkan nilai A!";
+} elseif ($nilai >= 70) {
+    echo "Anda mendapatkan nilai B.";
+} else {
+    echo "Anda perlu belajar lebih giat.";
+}
+?&gt;
+            </pre>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Mengontrol Alur Program dengan PHP</p>
+    </footer>
+</body>
+</html>

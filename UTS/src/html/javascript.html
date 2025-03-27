@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengenalan JavaScript</title>
+    <style>
+        /* Styling umum */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #16213e;
+        }
+
+        h1 {
+            color: #6a5acd;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #6a5acd;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #a29bfe;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #0f3460;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        pre {
+            background-color: #16213e;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #ffffff;
+        }
+
+        .example {
+            background-color: #1a1a2e;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #6a5acd;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #a29bfe;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #16213e;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pengenalan JavaScript</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Apa itu JavaScript?</a></li>
+                <li><a href="#cara-pakai">Cara Menggunakan JavaScript</a></li>
+                <li><a href="#contoh">Contoh Implementasi</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="intro">
+        <h2>Apa itu JavaScript?</h2>
+        <p>JavaScript adalah bahasa pemrograman yang digunakan untuk menambahkan interaktivitas ke dalam halaman web, seperti animasi, validasi form, dan event handling.</p>
+    </section>
+    
+    <section id="cara-pakai">
+        <h2>Cara Menggunakan JavaScript</h2>
+        <p>Ada tiga cara menambahkan JavaScript ke dalam halaman web:</p>
+        <ul>
+            <li><strong>Inline JavaScript:</strong> Ditulis langsung dalam atribut elemen HTML.</li>
+            <li><strong>Internal JavaScript:</strong> Ditulis dalam tag <code>&lt;script&gt;</code> di dalam file HTML.</li>
+            <li><strong>External JavaScript:</strong> Menggunakan file <code>.js</code> terpisah.</li>
+        </ul>
+    </section>
+
+    <section id="contoh">
+        <h2>Contoh Implementasi</h2>
+        <p>Berikut adalah contoh sederhana penggunaan JavaScript untuk menampilkan pesan saat tombol ditekan:</p>
+        <div class="example">
+            <h3>Contoh JavaScript</h3>
+            <pre>
+&lt;button onclick="tampilkanPesan()"&gt;Klik Saya!&lt;/button&gt;
+
+&lt;script&gt;
+function tampilkanPesan() {
+    alert("Halo! Ini adalah contoh JavaScript.");
+}
+&lt;/script&gt;
+            </pre>
+            <button onclick="tampilkanPesan()">Klik Saya!</button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Pengenalan JavaScript</p>
+    </footer>
+
+    <script>
+        function tampilkanPesan() {
+            alert("Halo! Ini adalah contoh JavaScript.");
+        }
+    </script>
+</body>
+</html>

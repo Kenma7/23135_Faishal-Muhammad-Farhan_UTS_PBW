@@ -1,0 +1,590 @@
+* {
+    margin : 0;
+    padding : 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color:  #1f2937;
+    color : white;
+    font-family: Arial, sans-serif;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Efek blur */
+}
+
+.nav.scroll {
+    background-color: #293547; /* Lebih transparan saat scroll */
+    backdrop-filter: blur(10px); /* Blur lebih kuat saat scroll */
+}
+
+.nav.default {
+    background-color: #1f2937;
+    backdrop-filter: blur(5px);
+}
+
+.logo-web {
+    display: flex;
+    align-items: center;
+    font-family: fantasy;
+}
+
+.logo-joker {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+.ul-nav {
+    justify-content: right;
+    display : flex;
+    height : 50px;
+    align-items: center;
+    list-style-type: none;
+}
+
+.li-nav {
+    margin-right: 10px;
+    color : white;
+    padding : 20px;
+}
+
+.li-nav:hover {
+    background-color: #7a6cff;
+    height: 23px;
+}
+
+.li-nav a{
+    color : white;
+}
+
+section {
+    height: 100vh;
+}
+
+/*Home section*/
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.con-welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.con-welcome.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.overview {
+    width: 100vw; 
+    height: 100vh; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    pointer-events: none;
+}
+
+.overview.show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.bttn-start {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bttn-start:hover {
+    background-color: #4f46e5;
+}
+
+/*.welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}*/
+
+.joker-card {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+}
+
+.container {
+    color: white;
+    width : 80%;
+    height : 100vh;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.biodata-content {
+    margin-left: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-profile {
+    text-align: left;
+    margin-left: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+.hobbies-content {
+    font-size: 15px;
+
+}
+
+.img-profile {
+    height: 350px;
+    width: 250px;
+    padding: 30px;
+    border-radius: 50%;
+}
+
+.icons-content {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.icon-sosmed {
+    background-color: #7a6cff;
+    width: 20px;
+    height: 20px;
+    font-size: 100px;
+    border-radius: 50%;
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+}
+
+.profile-content {
+    color: white;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.font-profile {
+    font-size: 50px;
+    margin-top: 100px;
+}
+
+.profile-text {
+    font-size: 30px;
+    padding: 30px;
+    line-height: 4;
+}
+
+.joker-img {
+    width: 100px;
+    display: flex;
+    justify-self: right;
+}
+
+.h1-main {
+    color: #7a6cff;   
+    font-size: 100px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bttn {
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+    border: 2px solid #7a6cff;
+}
+
+.bttn:hover {
+    background-color: #7a6cff;
+}
+
+/*Skill Section*/
+.skills{
+    background-color: #1c2430;
+    margin: 50px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.con-skill {
+    height: 200px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto); 
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.skill {
+    text-align: left;
+}
+
+.skill p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.skill-bar {
+    width: 80%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.skill-fill {
+    height: 100%;
+    width: 0; /* Default: kosong sebelum animasi */
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    border-radius: 10px;
+    transition: width 2s ease-in-out;
+}
+
+.experience{
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.experience h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.ul-exp {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    list-style: disc;
+}
+
+.ul-exp li {
+    margin: 20px;
+}
+/*Skill End*/
+
+/*About Section*/
+.about {
+    background-color: #1c2430;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+.about h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #a0aec0;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #a0aec0;
+    line-height: 1.6;
+}
+
+.about-text span{
+    color: white;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .about-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+}
+
+/*About Section END*/
+
+span {
+    color: #7a6cff;
+}
+
+.clown-logo {
+    width: 25px;
+    padding: 10px;
+}
+
+.contact{
+    display : flex;
+    justify-content: center;
+}
+
+.tittle-form{
+    text-align: center;
+}
+
+.co-form {
+    justify-content: center;
+    color:black;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-section{
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #7a6cff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #473e9b;
+}
+
+/*Materi Section*/
+.co-materi {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #1e293b; /* Warna background gelap */
+    padding: 20px;
+}
+
+.co-materi h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.materi-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.materi-item {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 320px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+}
+
+.materi-item:hover {
+    transform: translateY(-5px); /* Animasi hover untuk keseluruhan kartu */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #e2e8f0; /* Warna hover */
+}
+
+.materi-item a {
+    text-decoration: none;
+    color: inherit; /* Warna teks tetap */
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+.materi-item img {
+    width: 50px; /* Ukuran ikon */
+    height: auto;
+    border-radius: 5px;
+}
+
+.materi-item h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.materi-item p {
+    font-size: 14px;
+    margin: 5px 0 0;
+}
+
+
+.proyek-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.proyek-item {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.proyek-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.proyek-item img:hover {
+    transform: scale(1.05);
+}
+
+#Materi {
+    padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+    margin-top: -80px; /* Mengompensasi padding agar tidak ada ruang kosong tambahan */
+}
+
+
+.footer {
+    background-color: #6366F1;
+    height: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
